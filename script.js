@@ -27,7 +27,7 @@ let numberToCalculate2
 
 // operators object for referencing operations functions 
 
-operations = {
+const operations = {
     "+": add,
     "-": substract,
     "*": multiply,
@@ -74,7 +74,18 @@ resultButton.addEventListener("click", (e) => {
     console.log(finalResult)
 })
 
+
+
 console.log(operate(2, "/", 5))
+
+clear = document.getElementById("clear-button")
+
+clear.addEventListener("click", () => {
+    calculationScreen.value = ""
+    numberToCalculate1 = null
+    numberToCalculate2 = null
+    operatorVariable = null
+})
 
 //operations button functions
 
